@@ -2,12 +2,17 @@ const headerHTML = `
 <header class="header">
   <div class="container">
     <h1 onclick="window.location.href='${
-      window.location.pathname === '/index.html' ||
-      window.location.pathname.endsWith('/repository-name/')
-        ? './index.html'
-        : '../index.html'
+      window.location.pathname.includes('about.html') ||
+      window.location.pathname.includes('works/')
+        ? '../index.html'
+        : './index.html'
     }'" class="h1">
-      <img src="./public/icon/ZN-LOGO.svg" alt="" />UXUI PORTFOLIO
+      <img src="${
+        window.location.pathname.includes('about.html') ||
+        window.location.pathname.includes('works/')
+          ? '../public/icon/ZN-LOGO.svg'
+          : './public/icon/ZN-LOGO.svg'
+      }" alt="" />UXUI PORTFOLIO
     </h1>
     <div class="btn-container">
       <button
@@ -23,7 +28,7 @@ const headerHTML = `
       </button>
       <button
         onclick="window.location.href='${
-          window.location.pathname === '/about.html'
+          window.location.pathname.includes('about.html')
             ? './about.html'
             : './about.html'
         }'"
