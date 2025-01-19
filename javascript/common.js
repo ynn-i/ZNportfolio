@@ -7,12 +7,17 @@ const headerHTML = `
         ? '../index.html'
         : './index.html'
     }'" class="h1">
-      <img src="${
-        window.location.pathname.includes('about.html') ||
-        window.location.pathname.includes('works/')
-          ? '../public/icon/ZN-LOGO.svg'
-          : './public/icon/ZN-LOGO.svg'
-      }" alt="" />UXUI PORTFOLIO
+      <img 
+        src="${
+          window.location.pathname.includes('works/list.html') ||
+          window.location.pathname.includes('works/detail')
+            ? '../public/icon/ZN-LOGO.svg'
+            : window.location.pathname.includes('about.html')
+            ? '../public/icon/ZN-LOGO.svg'
+            : './public/icon/ZN-LOGO.svg'
+        }" 
+        alt="" 
+      />UXUI PORTFOLIO
     </h1>
     <div class="btn-container">
       <button
@@ -28,7 +33,9 @@ const headerHTML = `
       </button>
       <button
         onclick="window.location.href='${
-          window.location.pathname.includes('about.html')
+          window.location.pathname.includes('works')
+            ? '../about.html'
+            : window.location.pathname.includes('about.html')
             ? './about.html'
             : './about.html'
         }'"
