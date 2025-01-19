@@ -6,7 +6,7 @@ const headerHTML = `
         ? 'index.html'
         : '../index.html'
     }'" class="h1">
-      <img src="/public/icon/ZN-LOGO.svg" alt="" />UXUI PORTFOLIO
+      <img src="public/icon/ZN-LOGO.svg" alt="" />UXUI PORTFOLIO
     </h1>
     <div class="btn-container">
       <button
