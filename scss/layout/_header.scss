@@ -1,0 +1,17 @@
+.header {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid $graydd;
+
+  .h1 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .btn-container {
+    display: flex;
+    gap: 80px;
+  }
+}
