@@ -3,14 +3,16 @@ const headerHTML = `
   <div class="container">
     <h1 onclick="window.location.href='${
       window.location.pathname.endsWith('/') ||
-      window.location.pathname.endsWith('index.html')
+      window.location.pathname.endsWith('index.html') ||
+      window.location.pathname.endsWith('about.html')
         ? './index.html'
         : '../index.html'
     }'" class="h1">
       <img 
         src="${
           window.location.pathname.endsWith('/') ||
-          window.location.pathname.endsWith('index.html')
+          window.location.pathname.endsWith('index.html') ||
+          window.location.pathname.endsWith('about.html')
             ? './public/icon/ZN-LOGO.svg'
             : '../public/icon/ZN-LOGO.svg'
         }" 
